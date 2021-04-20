@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pathfinding/static/css/main.b26993b5.chunk.css",
+    "main.js": "/pathfinding/static/js/main.1776158c.chunk.js",
+    "main.js.map": "/pathfinding/static/js/main.1776158c.chunk.js.map",
+    "runtime-main.js": "/pathfinding/static/js/runtime-main.0b31ec7b.js",
+    "runtime-main.js.map": "/pathfinding/static/js/runtime-main.0b31ec7b.js.map",
+    "static/js/2.de886a24.chunk.js": "/pathfinding/static/js/2.de886a24.chunk.js",
+    "static/js/2.de886a24.chunk.js.map": "/pathfinding/static/js/2.de886a24.chunk.js.map",
+    "index.html": "/pathfinding/index.html",
+    "static/css/main.b26993b5.chunk.css.map": "/pathfinding/static/css/main.b26993b5.chunk.css.map",
+    "static/js/2.de886a24.chunk.js.LICENSE.txt": "/pathfinding/static/js/2.de886a24.chunk.js.LICENSE.txt",
+    "static/media/circle.a538beda.svg": "/pathfinding/static/media/circle.a538beda.svg",
+    "static/media/triangletwo-down.59a63b87.svg": "/pathfinding/static/media/triangletwo-down.59a63b87.svg",
+    "static/media/triangletwo-left.c7c58717.svg": "/pathfinding/static/media/triangletwo-left.c7c58717.svg",
+    "static/media/triangletwo-right.c7b52e1e.svg": "/pathfinding/static/media/triangletwo-right.c7b52e1e.svg",
+    "static/media/triangletwo-up.5c5fbe98.svg": "/pathfinding/static/media/triangletwo-up.5c5fbe98.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b31ec7b.js",
+    "static/js/2.de886a24.chunk.js",
+    "static/css/main.b26993b5.chunk.css",
+    "static/js/main.1776158c.chunk.js"
+  ]
+}

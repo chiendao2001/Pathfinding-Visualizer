@@ -7,7 +7,6 @@ import finish from './circle.svg'
 
 const Node = props => {
     const setDirection = () => {
-        console.log(props)
         if (props.direction === 'right') return right
         if (props.direction === 'left') return left
         if (props.direction === 'down') return down

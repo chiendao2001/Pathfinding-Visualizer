@@ -5,7 +5,6 @@ import down from './node/triangletwo-down.svg'
 
 //Animate the nodes visited in the process of finding the shortest path
 export const animateNodes = (nodes, path, nodeSpeed, pathSpeed) => {
-    console.log(nodes)
     for (let i = 0; i <= nodes.length; i++) {
         if (i === nodes.length) {
             setTimeout(() => {

@@ -159,8 +159,6 @@ const Visualizer = () => {
                     const endNode = newPath[newPath.length - 1]
                     const nearEndNode = endNode.previous
                     endNode.isArrow = true
-                    console.log(nearEndNode)
-                    console.log(endNode)
                     if (endNode.row > nearEndNode.row) endNode.direction = 'down'
                     else if (endNode.row < nearEndNode.row) endNode.direction = 'up'
                     else if (endNode.col > nearEndNode.col) endNode.direction = 'right'

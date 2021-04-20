@@ -1,0 +1,64 @@
+.node {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    border: solid 0.5px rgb(59, 194, 228);
+    margin: auto -0.5px;
+    vertical-align: top;
+}
+
+.visited {
+    background-color: rgb(59, 194, 228);
+    border: solid 0.5px white;
+}
+
+.path {
+    background-color: yellow;
+    border: solid 0.5px yellow;
+}
+
+.wall {
+    background-color: rgb(19, 20, 70);
+    border: solid 0.5px rgb(19, 20, 70);
+}
+
+.start {
+    /* display: block;
+    margin: 0 auto; */
+    /* height: 14px;
+    display: block;
+    margin: 0 auto;
+    text-align: center; */
+}
+
+td {
+    text-align: center;
+}
+
+.arrow {
+    position: relative;
+    left: -7px;
+    top: -2px
+}
+
+.finish {
+    position: relative;
+    left: -7px;
+    top: -2px
+}
+
+.row {
+    text-align: center;
+    display: inline-block;
+    margin: -2px 0
+}
+
+#grid{
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

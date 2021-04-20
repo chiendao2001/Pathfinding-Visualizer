@@ -1,0 +1,56 @@
+.guide {
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 500px; /* Need a specific value to work */
+    border: solid 1px black;
+    border-radius: 15px;
+    min-height: 400px;
+}
+
+.leads {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.headers, .guides {
+    text-align: center;
+    margin: 10px 5px;
+}
+
+.index {
+    text-align: right;
+    margin: 5px 5px;
+}
+
+.guides {
+    margin: 10px 10px;
+}
+
+.skip {
+    margin: 5px 10px;
+}
+
+.next, .previous, .skip {
+    margin: 5px 10px;
+    position: absolute;
+    bottom:   0;
+}
+
+.next {
+    margin: 5px 10px;
+    position: absolute;
+    right:    0;
+    bottom:   0;
+}
+
+.previous {
+    margin: 5px 10px;
+    position: absolute;
+    right: 70px;
+    bottom:   0;
+}

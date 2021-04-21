@@ -58,7 +58,6 @@ const Guide = props => {
             <b>{guide[0]}:</b> {guide[1]}
         </div>)
     }
-    console.log(step)
 
     return (
         <div className = 'guide'>

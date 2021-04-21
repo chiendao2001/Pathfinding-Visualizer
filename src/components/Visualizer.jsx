@@ -10,6 +10,7 @@ import Nav from './nav/Nav'
 import {animateNodes, drawVisitedNodes, chooseArrow, drawMaze} from './Animations'
 import Guide from './guide/Guide'
 import './styles.css'
+import circle from './node/circle.svg'
 
 const Visualizer = () => {  
     const [grid, setGrid] = useState([[]])  
@@ -27,7 +28,7 @@ const Visualizer = () => {
 
     //The status to disable all activities on the grid (draw maze, draw or remove walls, 
     //move node, visualize the path...) if the visualization is running or the maze is being drawn
-    const [isDisabled, setIsDisabled] = useState(false)
+    const [isDisabled, setIsDisabled] = useState(true)
 
     const [startRow, setStartRow] = useState(3)
     const [startCol, setStartCol] = useState(1)
@@ -46,13 +47,14 @@ const Visualizer = () => {
     const nodeSpeed = 10
 
     useEffect(() => setGrid(createGrid()),[])
-
+    // grid != null && console.log(grid)
     const handleMouseDown = (row, col) => {
         let newGrid = grid
 
         //Check if the start or the finish node is pressed
         const isStartNode = row === startRow && col === startCol
         const isEndNode = row === finishRow && col === finishCol
+        
 
         //Draw or remove wall if the node is neither start node nor finish node
         if (!(isStartNode || isEndNode || isDisabled)) {         
@@ -61,7 +63,6 @@ const Visualizer = () => {
             newGrid[row][col].isWall = !newGrid[row][col].isWall
         }
         setIsPressed(!(isStartNode || isEndNode || isDisabled))
-
         //Move the start node
         setStartButton(prev => {
             if (prev) {
@@ -83,6 +84,7 @@ const Visualizer = () => {
             }
             return (isEndNode && !isDisabled)
         })
+        // newGrid[startRow][startCol].isArrow = true
         setGrid(newGrid)
         setPreviousWall(null)
     }
@@ -105,9 +107,9 @@ const Visualizer = () => {
         const newStartCol = startButton && !isEndNode  ? col : startCol
         setStartCol(newStartCol)
         setStartRow(newStartRow)
-        if (newGrid[0].length > 0) {
+        if (newGrid[0].length > 0 && !newGrid[row][col].isStart) {
             newGrid[startRow][startCol].isStart = !(startButton && !isEndNode)
-            newGrid[row][col].isStart = startButton && !isEndNode
+            newGrid[row][col].isStart = startButton && !isEndNode    
         }
         
         //Update finish node
@@ -115,7 +117,7 @@ const Visualizer = () => {
         const newFinishCol = finishButton && !isStartNode ? col : finishCol 
         setFinishCol(newFinishCol)
         setFinishRow(newFinishRow)
-        if (newGrid[0].length > 0) {
+        if (newGrid[0].length > 0 && !newGrid[row][col].isFinish) {
             newGrid[finishRow][finishCol].isFinish = !(finishButton && !isStartNode)
             newGrid[row][col].isFinish = finishButton && !isStartNode
         }
@@ -242,6 +244,10 @@ const Visualizer = () => {
                 totalDistance: Number.MAX_VALUE
             }))))
 
+        const endNode = grid[finishRow][finishCol]
+        endNode.isArrow = false
+        document.getElementById(`${endNode.row}-${endNode.col}`).childNodes[0].src = circle
+
         setIsPathFound(false)
     }
 
@@ -323,6 +329,7 @@ const Visualizer = () => {
 
     const finishGuide = () => {
         setIsGuideFinished(true)
+        setIsDisabled(false)
     }
 
     return (

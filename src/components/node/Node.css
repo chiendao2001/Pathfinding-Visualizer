@@ -22,30 +22,16 @@
     border: solid 0.5px rgb(19, 20, 70);
 }
 
-.start {
-    /* display: block;
-    margin: 0 auto; */
-    /* height: 14px;
-    display: block;
-    margin: 0 auto;
-    text-align: center; */
+.arrow, .finish {
+    position: relative;
+    left: -11px;
+    top: -2px
 }
 
 td {
     text-align: center;
 }
 
-.arrow {
-    position: relative;
-    left: -7px;
-    top: -2px
-}
-
-.finish {
-    position: relative;
-    left: -7px;
-    top: -2px
-}
 
 .row {
     text-align: center;

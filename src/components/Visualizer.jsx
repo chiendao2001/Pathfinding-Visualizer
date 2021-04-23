@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState} from 'react'
 import Node from './node/Node'
 import {getShortestPath, dijkstra} from './algorithms/pathfinding/Dijkstra.js'
 import {aStar} from './algorithms/pathfinding/A*'
@@ -39,12 +39,19 @@ const Visualizer = () => {
 
     const [isGuideFinished, setIsGuideFinished] = useState(false)
 
-    const WIDTH = 45
-    const HEIGHT = 15
+    let WIDTH = Math.floor(document.documentElement.clientWidth/25)
+
+    if (!(WIDTH % 2)) WIDTH += 1
+
+    let HEIGHT = Math.floor(document.documentElement.clientHeight/40)
+    
+    if (!(HEIGHT % 2)) HEIGHT += 1
 
     const mazeSpeed = 5
     const pathSpeed = 50
     const nodeSpeed = 10
+
+    console.log(document.documentElement.clientWidth/25)
 
     useEffect(() => setGrid(createGrid()),[])
     // grid != null && console.log(grid)

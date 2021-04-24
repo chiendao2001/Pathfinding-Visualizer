@@ -71,6 +71,7 @@ const Visualizer = () => {
         }
         setIsPressed(!(isStartNode || isEndNode || isDisabled))
         //Move the start node
+        let newIsDisabled = false
         setStartButton(prev => {
             if (prev) {
                 const classes = document.getElementById(`${row}-${col}`).classList
@@ -78,6 +79,7 @@ const Visualizer = () => {
                 newGrid[row][col].isWall = false
                 return !prev
             }
+            newIsDisabled = true
             return (isStartNode && !isDisabled) 
         })
 
@@ -89,10 +91,12 @@ const Visualizer = () => {
                 newGrid[row][col].isWall = false
                 return !prev
             }
+            newIsDisabled = true
             return (isEndNode && !isDisabled)
         })
         // newGrid[startRow][startCol].isArrow = true
         setGrid(newGrid)
+        setIsDisabled(newIsDisabled)
         setPreviousWall(null)
     }
 

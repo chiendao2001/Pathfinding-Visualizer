@@ -17,8 +17,8 @@ const Node = props => {
                 onMouseDown = {() => props.onMouseDown(props.row, props.col)}
                 onMouseUp = {() => props.onMouseUp()}
                 onMouseEnter = {() => props.onMouseEnter(props.row, props.col)}>
-                {(props.isArrow || props.isStart) &&  <img class = 'start arrow' src= {setDirection()} alt="img"/>}
-                {(props.isFinish && !props.isArrow) &&  <img className = 'finish' src= {finish} alt="img"/>}
+                {(props.isArrow || props.isStart) &&  <img class = 'start arrow zoom' src= {setDirection()} alt="img"/>}
+                {(props.isFinish && !props.isArrow) &&  <img className = 'finish zoom' src= {finish} alt="img"/>}
             </div>
 }
 

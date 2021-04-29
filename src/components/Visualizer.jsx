@@ -79,7 +79,6 @@ const Visualizer = () => {
                 newGrid[row][col].isWall = false
                 return !prev
             }
-            newIsDisabled = true
             return (isStartNode && !isDisabled) 
         })
 
@@ -91,7 +90,6 @@ const Visualizer = () => {
                 newGrid[row][col].isWall = false
                 return !prev
             }
-            newIsDisabled = true
             return (isEndNode && !isDisabled)
         })
         // newGrid[startRow][startCol].isArrow = true

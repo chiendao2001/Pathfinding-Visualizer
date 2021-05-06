@@ -44,7 +44,7 @@ const Guide = props => {
                         'Walls are impenetrable. If your node meets a wall in the pathfinding process, it will have to find a new (and longer) path',
                         '"Clear wall" will remove all the existing walls on the grid. "Clear Grid" will delete everything, including the visited nodes and path.',
                         'There are two types of mazes for you (Prim is also an important algorithm in graph theory). The process of creating a maze will start immediately.',
-                        'This project is (indirectly) the outcome of my Foundations of Computations class. A huge thanks to Professor Scott Thede with his Graph Theory lectures.'
+                        'This project is (indirectly) the outcome of my Foundations of Computation class. A huge thanks to Professor Scott Thede with his Graph Theory lectures.'
                     ]  
     
     const generateHeaders = step => <h1 className = 'headers'>{headers[step]}</h1>
